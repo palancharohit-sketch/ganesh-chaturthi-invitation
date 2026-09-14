@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="divineGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#b45309" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4cc"/>
+      <stop offset="35%" stop-color="#f5be38"/>
+      <stop offset="70%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="vermilionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Halo Glow -->
+  <circle cx="200" cy="200" r="185" fill="url(#divineGlow)" />
+  <circle cx="200" cy="200" r="170" stroke="url(#goldGradient)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+  <circle cx="200" cy="200" r="158" stroke="url(#goldGradient)" stroke-width="0.75" opacity="0.4"/>
+
+  <!-- Stylized Ganesha Line Art & Tilak -->
+  <g transform="translate(0, -5)">
+    <!-- Crown / Mukut -->
+    <path d="M185 85 L200 45 L215 85 L235 90 L200 75 L165 90 Z" fill="url(#goldGradient)" />
+    <circle cx="200" cy="45" r="4" fill="#fbbf24" />
+    <path d="M175 92 Q200 80 225 92 Q200 100 175 92 Z" fill="url(#vermilionGradient)" />
+
+    <!-- Tilak / Trishul mark -->
+    <path d="M197 105 L203 105 L203 135 L197 135 Z" fill="url(#vermilionGradient)" />
+    <circle cx="200" cy="142" r="3.5" fill="#ef4444" />
+    <path d="M190 112 Q200 125 210 112" stroke="url(#goldGradient)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- Face & Trunk -->
+    <path d="M165 130 Q160 185 185 220 Q200 242 205 268 Q210 295 235 295 Q252 295 250 278 Q248 260 228 255 Q205 250 205 215 Q205 170 235 130" 
+          stroke="url(#goldGradient)" stroke-width="5.5" stroke-linecap="round" fill="none" />
+
+    <!-- Large Ears -->
+    <!-- Left Ear -->
+    <path d="M168 135 C115 130 110 185 150 215 C160 222 170 225 175 225" 
+          stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <!-- Right Ear -->
+    <path d="M232 135 C285 130 290 185 250 215 C240 222 230 225 225 225" 
+          stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Modak / Laddoo in trunk hint -->
+    <circle cx="242" cy="275" r="7" fill="url(#goldGradient)" />
+
+    <!-- Little auspicious symbols -->
+    <circle cx="150" cy="175" r="2" fill="#fef08a" />
+    <circle cx="250" cy="175" r="2" fill="#fef08a" />
+    
+    <!-- Tusk (Ekdanta) -->
+    <path d="M178 200 L168 206 L180 210 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Decorative bottom ring flourish -->
+  <path d="M130 330 Q200 350 270 330" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <circle cx="200" cy="341" r="3" fill="url(#goldGradient)" />
+</svg>
