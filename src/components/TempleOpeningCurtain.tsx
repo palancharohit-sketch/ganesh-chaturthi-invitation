@@ -43,22 +43,23 @@ export const TempleOpeningCurtain: React.FC<TempleOpeningCurtainProps> = ({
           }
           transition={{ duration: 3.1, ease: [0.33, 1, 0.68, 1] }}
           style={{ transformOrigin: "left center" }}
-          className="w-1/2 h-full bg-gradient-to-r from-[#1A0805] via-[#2A0C07] to-[#160604] border-r-2 border-[#D4AF5A]/80 shadow-[12px_0_45px_rgba(0,0,0,0.95)] relative flex flex-col justify-between overflow-hidden"
+          className="w-1/2 h-full bg-gradient-to-r from-[#180504] via-[#350C07] to-[#200705] border-r-2 border-[#D4AF5A]/90 shadow-[14px_0_50px_rgba(0,0,0,0.95)] relative flex flex-col justify-between overflow-hidden"
         >
-          {/* Subtle Temple Dot Texture */}
-          <div className="absolute inset-0 temple-pattern opacity-20 pointer-events-none" />
-          <div className="absolute top-4 bottom-4 right-3 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/60 to-transparent" />
-          <div className="absolute top-4 right-3 w-4 h-4 border-t border-r border-[#D4AF5A]/70" />
-          <div className="absolute bottom-4 right-3 w-4 h-4 border-b border-r border-[#D4AF5A]/70" />
+          {/* Festive Temple Dot Texture & Saffron Highlights */}
+          <div className="absolute inset-0 temple-pattern opacity-25 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-32 h-full bg-[radial-gradient(ellipse_at_right,_rgba(230,90,22,0.15)_0%,_transparent_75%)] pointer-events-none" />
+          <div className="absolute top-4 bottom-4 right-3 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/70 to-transparent" />
+          <div className="absolute top-4 right-3 w-4 h-4 border-t border-r border-[#D4AF5A]/80" />
+          <div className="absolute bottom-4 right-3 w-4 h-4 border-b border-r border-[#D4AF5A]/80" />
 
           {/* Carved Door Bosses */}
           <div className="h-full flex flex-col justify-around py-16 px-4">
             {[0, 1, 2, 3].map((n) => (
               <div
                 key={`ldoor-boss-${n}`}
-                className="w-10 h-10 rounded-xl border border-[#D4AF5A]/40 bg-black/60 flex items-center justify-center shadow-inner ml-auto mr-3"
+                className="w-10 h-10 rounded-xl border border-[#D4AF5A]/50 bg-black/70 flex items-center justify-center shadow-inner ml-auto mr-3"
               >
-                <div className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#B88632] via-[#E7C56A] to-[#B88632] shadow" />
+                <div className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#B88632] via-[#E7C56A] to-[#E65A16] shadow" />
               </div>
             ))}
           </div>
@@ -73,22 +74,23 @@ export const TempleOpeningCurtain: React.FC<TempleOpeningCurtainProps> = ({
           }
           transition={{ duration: 3.1, ease: [0.33, 1, 0.68, 1] }}
           style={{ transformOrigin: "right center" }}
-          className="w-1/2 h-full bg-gradient-to-l from-[#1A0805] via-[#2A0C07] to-[#160604] border-l-2 border-[#D4AF5A]/80 shadow-[-12px_0_45px_rgba(0,0,0,0.95)] relative flex flex-col justify-between overflow-hidden"
+          className="w-1/2 h-full bg-gradient-to-l from-[#180504] via-[#350C07] to-[#200705] border-l-2 border-[#D4AF5A]/90 shadow-[-14px_0_50px_rgba(0,0,0,0.95)] relative flex flex-col justify-between overflow-hidden"
         >
-          {/* Subtle Temple Dot Texture */}
-          <div className="absolute inset-0 temple-pattern opacity-20 pointer-events-none" />
-          <div className="absolute top-4 bottom-4 left-3 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/60 to-transparent" />
-          <div className="absolute top-4 left-3 w-4 h-4 border-t border-l border-[#D4AF5A]/70" />
-          <div className="absolute bottom-4 left-3 w-4 h-4 border-b border-l border-[#D4AF5A]/70" />
+          {/* Festive Temple Dot Texture & Saffron Highlights */}
+          <div className="absolute inset-0 temple-pattern opacity-25 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-32 h-full bg-[radial-gradient(ellipse_at_left,_rgba(230,90,22,0.15)_0%,_transparent_75%)] pointer-events-none" />
+          <div className="absolute top-4 bottom-4 left-3 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/70 to-transparent" />
+          <div className="absolute top-4 left-3 w-4 h-4 border-t border-l border-[#D4AF5A]/80" />
+          <div className="absolute bottom-4 left-3 w-4 h-4 border-b border-l border-[#D4AF5A]/80" />
 
           {/* Carved Door Bosses */}
           <div className="h-full flex flex-col justify-around py-16 px-4">
             {[0, 1, 2, 3].map((n) => (
               <div
                 key={`rdoor-boss-${n}`}
-                className="w-10 h-10 rounded-xl border border-[#D4AF5A]/40 bg-black/60 flex items-center justify-center shadow-inner mr-auto ml-3"
+                className="w-10 h-10 rounded-xl border border-[#D4AF5A]/50 bg-black/70 flex items-center justify-center shadow-inner mr-auto ml-3"
               >
-                <div className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#B88632] via-[#E7C56A] to-[#B88632] shadow" />
+                <div className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#B88632] via-[#E7C56A] to-[#E65A16] shadow" />
               </div>
             ))}
           </div>

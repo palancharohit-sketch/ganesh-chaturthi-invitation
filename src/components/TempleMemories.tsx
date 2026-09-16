@@ -8,7 +8,7 @@ export const TempleMemories: React.FC = () => {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
 
-  const items = eventConfig.galleryImages.slice(0, 6);
+  const items = eventConfig.galleryImages;
 
   const handleImageError = (id: string) => {
     setFailedImages((prev) => ({ ...prev, [id]: true }));
@@ -27,20 +27,20 @@ export const TempleMemories: React.FC = () => {
   };
 
   return (
-    <section className="px-3 py-8 w-full flex flex-col items-center text-center">
-      <div className="w-full max-w-[400px] flex flex-col items-center">
+    <section className="px-4 py-12 w-full flex flex-col items-center text-center">
+      <div className="w-full max-w-xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center">
         {/* Section Header: MEMORIES & PREVIOUS YEAR CELEBRATIONS */}
-        <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#E7C56A] font-bold block mb-1">
+        <span className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E7C56A] font-bold block mb-1">
           MEMORIES
         </span>
-        <h2 className="font-yatra text-xl sm:text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1D0] via-[#E7C56A] to-[#D4AF5A] drop-shadow-sm">
+        <h2 className="font-yatra text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1D0] via-[#E7C56A] to-[#D4AF5A] drop-shadow-sm">
           PREVIOUS YEAR CELEBRATIONS
         </h2>
 
         <OrnateDivider className="my-2.5" />
 
-        {/* Cinematic Temple Photo Collage: Pure Photos (No text, captions, or descriptions) */}
-        <div className="grid grid-cols-2 gap-2.5 w-full pt-1">
+        {/* Cinematic Temple Photo Collage: 2 cols on mobile, 3 on tablet, 4 on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 w-full pt-2">
           {items.map((item: GalleryItem, idx: number) => {
             const isFailed = failedImages[item.id];
 

@@ -10,9 +10,9 @@ export const TempleLocation: React.FC = () => {
 
   return (
     <section className="px-4 py-8 w-full flex flex-col items-center text-center">
-      <div className="w-full max-w-[390px] flex flex-col items-center space-y-3">
+      <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl flex flex-col items-center space-y-3">
         {/* Section Header */}
-        <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
+        <span className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
           LOCATION
         </span>
 
@@ -57,7 +57,7 @@ export const TempleLocation: React.FC = () => {
               {eventConfig.associationName}
             </h3>
             <p className="font-asar text-xs text-[#F4E5C3]/80">
-              Near St. Mark School, Hyderabad - 500027
+              {eventConfig.sthapanaAddress}
             </p>
             <p className="font-cinzel text-[10px] uppercase tracking-wider text-[#E7C56A] pt-1 font-semibold">
               Tap to open in Google Maps ↗

@@ -48,18 +48,18 @@ export const TempleFooter: React.FC = () => {
       </div>
 
       {/* English Devotional Blessing Message */}
-      <div className="relative z-10 max-w-xs px-3 mb-6">
-        <p className="font-asar text-xs sm:text-sm text-[#FFF1D0]/95 leading-relaxed italic">
+      <div className="relative z-10 max-w-md sm:max-w-xl px-4 mb-6">
+        <p className="font-asar text-xs sm:text-sm md:text-base text-[#FFF1D0]/95 leading-relaxed italic">
           "May Lord Ganesha's divine blessings always be with you and your family."
         </p>
       </div>
 
       {/* Association Watermark */}
-      <div className="relative z-10 pt-4 border-t border-[#D4AF5A]/25 w-full max-w-[280px]">
-        <p className="font-yatra text-xs font-bold text-[#E7C56A]">
+      <div className="relative z-10 pt-4 border-t border-[#D4AF5A]/25 w-full max-w-sm sm:max-w-md">
+        <p className="font-yatra text-xs sm:text-sm font-bold text-[#E7C56A]">
           {eventConfig.associationName}
         </p>
-        <p className="font-asar text-[10px] text-[#F4E5C3]/70 mt-0.5">
+        <p className="font-asar text-[10px] sm:text-xs text-[#F4E5C3]/70 mt-0.5">
           Ganesh Utsav • {eventConfig.year}
         </p>
       </div>

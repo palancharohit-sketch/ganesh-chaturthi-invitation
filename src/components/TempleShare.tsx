@@ -36,10 +36,10 @@ export const TempleShare: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full px-4 py-6 flex flex-col items-center text-center">
-      {/* Compact Small Share Section */}
-      <div className="w-full max-w-[390px] flex flex-col items-center space-y-3">
-        <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
+    <section className="relative w-full px-4 py-8 flex flex-col items-center text-center">
+      {/* Share Section */}
+      <div className="w-full max-w-md md:max-w-xl flex flex-col items-center space-y-3">
+        <span className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
           SHARE INVITATION
         </span>
 

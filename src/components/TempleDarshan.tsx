@@ -22,18 +22,18 @@ export const TempleDarshan: React.FC = () => {
   };
 
   return (
-    <section className="relative px-3 py-8 w-full flex flex-col items-center text-center overflow-hidden">
-      <div className="w-full max-w-[400px] flex flex-col items-center">
+    <section className="relative px-4 py-12 w-full flex flex-col items-center text-center overflow-hidden">
+      <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl flex flex-col items-center">
         {/* Header */}
-        <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#E7C56A] font-bold block mb-1">
-          GANESH DARSHAN
+        <span className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E7C56A] font-bold block mb-1">
+          SEEK BAPPA BLESSINGS
         </span>
-        <p className="font-asar text-xs text-[#F4E5C3]/90 italic max-w-xs mb-3">
-          "Come together in devotion and celebrate the divine presence of Lord Ganesha."
+        <p className="font-asar text-xs sm:text-sm text-[#F4E5C3]/90 italic max-w-md mb-3">
+          "Offer your prayers and receive the divine blessings and grace of Lord Ganesha."
         </p>
 
         {/* LARGE GANESH IDOL STAGE */}
-        <div className="relative w-full h-[400px] sm:h-[460px] flex flex-col items-center justify-center my-2">
+        <div className="relative w-full h-[400px] sm:h-[480px] md:h-[540px] flex flex-col items-center justify-center my-2">
           {/* Soft Golden Aura/Shadow behind Ganesh: gently glows and expands during scale-up, then fades smoothly */}
           <motion.div
             animate={
@@ -49,7 +49,7 @@ export const TempleDarshan: React.FC = () => {
               times: [0, 0.4, 0.65, 1],
               ease: "easeInOut",
             }}
-            className="absolute w-[340px] h-[340px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(231,197,106,0.6)_0%,_rgba(212,175,90,0.3)_40%,_transparent_70%)] blur-2xl pointer-events-none"
+            className="absolute w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] md:w-[520px] md:h-[520px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(231,197,106,0.6)_0%,_rgba(212,175,90,0.3)_40%,_transparent_70%)] blur-2xl pointer-events-none"
           />
 
           {/* REAL GANESH IDOL: GENTLE DEVOTIONAL SCALE FROM 1.00 -> 1.06 -> HOLD -> 1.00 */}
@@ -146,16 +146,16 @@ export const TempleDarshan: React.FC = () => {
           </AnimatePresence>
         </div>
 
-        {/* SEEK BLESSINGS BUTTON */}
+        {/* SEEK BAPPA BLESSINGS BUTTON */}
         <div className="pt-2 z-20">
           <motion.button
             onClick={handleSeekBlessings}
             whileTap={{ scale: 0.95 }}
             disabled={isBlessingActive}
-            className="px-7 py-3 rounded-full border-2 border-[#D4AF5A] bg-gradient-to-r from-[#3A1008] via-[#4A1009] to-[#3A1008] text-[#FFF1D0] font-cinzel text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(18,6,4,0.9),0_0_15px_rgba(212,175,90,0.4)] hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+            className="px-7 py-3 rounded-full border-2 border-[#D4AF5A] bg-gradient-to-r from-[#4A1009] via-[#6D160D] to-[#4A1009] text-[#FFF1D0] font-cinzel text-xs font-bold tracking-widest uppercase flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(18,6,4,0.9),0_0_18px_rgba(230,90,22,0.35)] hover:brightness-110 active:scale-95 transition-all cursor-pointer"
           >
             <Sparkles className="w-4 h-4 text-[#E7C56A] animate-pulse" />
-            <span>{isBlessingActive ? "RECEIVING BLESSINGS..." : "SEEK BLESSINGS"}</span>
+            <span>{isBlessingActive ? "RECEIVING BLESSINGS..." : "SEEK BAPPA BLESSING"}</span>
             <Sparkles className="w-4 h-4 text-[#E7C56A] animate-pulse" />
           </motion.button>
         </div>

@@ -1,14 +1,13 @@
-export interface ProgramItem {
+export interface EventItem {
+  id: string;
   title: string;
   date: string;
   time: string;
-  location: string;
-  description?: string;
-}
-
-export interface OrganizerItem {
-  name: string;
-  image?: string;
+  location?: string;
+  mapsUrl?: string;
+  description: string;
+  badge?: string;
+  highlight?: boolean;
 }
 
 export interface GalleryItem {
@@ -19,6 +18,8 @@ export interface GalleryItem {
 
 export interface EventConfig {
   associationName: string;
+  subTitle: string;
+  mantra: string;
   year: number;
   ganeshaImage: string;
   hostMessage: string;
@@ -31,8 +32,10 @@ export interface EventConfig {
   sthapanaTime: string;
   sthapanaLocation: string;
   sthapanaAddress: string;
-  programs: ProgramItem[];
-  organizers: OrganizerItem[];
+  events: EventItem[];
+  dailyPujaTime: string;
+  luckyDrawToken: string;
+  annaPrasadamInfo: string;
   visarjanDate: string;
   visarjanTime: string;
   visarjanStartingLocation: string;
@@ -48,61 +51,84 @@ export interface EventConfig {
 }
 
 export const eventConfig: EventConfig = {
-  associationName: "Sri Sai Youth Association",
+  associationName: "NAVA YUVA SENA",
+  subTitle: "GANESH CHATURTHI CELEBRATION",
+  mantra: "GANPATI BAPPA MORYA",
   year: 2026,
-  ganeshaImage: "/images/ganesha/ganesha.png",
+  ganeshaImage: "/assets/ganesha/bappa-main.png",
   hostMessage:
-    "With the blessings of Lord Ganesha, we warmly invite you and your family to join us in the celebration of Ganesh Chaturthi.",
+    "With the divine blessings of Lord Ganesha, we warmly invite you and your family to join us in celebrating Ganesh Chaturthi with devotion, joy and togetherness.",
   eventDate: "14 September 2026",
-  eventTime: "7:30 PM",
-  eventLocation: "Nehru Nagar, Kachiguda",
-  eventAddress: "Nehru Nagar, Kachiguda, near St. Mark School",
-  eventMapsUrl: "https://maps.app.goo.gl/DLbWVgEL8Z2FBcVQ7",
+  eventTime: "7:00 PM",
+  eventLocation: "LB Nagar, Hyderabad",
+  eventAddress: "LB Nagar, Hyderabad - 500074",
+  eventMapsUrl: "https://maps.google.com/?q=LB+Nagar+Hyderabad",
   sthapanaDate: "14 September 2026",
-  sthapanaTime: "6:30 PM",
-  sthapanaLocation: "Nehru Nagar, Kachiguda",
-  sthapanaAddress: "Nehru Nagar, Kachiguda, near St. Mark School",
-  programs: [
+  sthapanaTime: "7:00 PM",
+  sthapanaLocation: "LB Nagar, Hyderabad",
+  sthapanaAddress: "LB Nagar, Hyderabad - 500074",
+  dailyPujaTime: "7:30 PM",
+  luckyDrawToken: "₹99/-",
+  annaPrasadamInfo: "20 September 2026 (Sunday) from 1:00 PM onwards",
+  events: [
     {
-      title: "Ganesh Sthapana",
-      date: "14 September 2026",
-      time: "6:30 PM",
-      location: "Nehru Nagar, Kachiguda, near St. Mark School",
-      description: "Sacred Prana Pratishtha and Sthapana of Lord Ganesha.",
+      id: "anna-prasadam",
+      title: "Anna Prasadam",
+      date: "20 September 2026 (Sunday)",
+      time: "From 1:00 PM onwards",
+      location: "LB Nagar, Hyderabad",
+      mapsUrl: "https://maps.app.goo.gl/wVrAzuHnUw5QHBmm7?g_st=aw",
+      description: "Divine Maha Prasadam will be served to all visiting devotees with Lord Ganesha's blessings.",
+      badge: "Maha Prasadam",
+      highlight: true,
     },
-    // You can easily add more programs here later!
-  ],
-  organizers: [
-    { name: "Chinna (Vittalesh)", image: "/images/organizers/chinna(vittalesh).png" },
-    { name: "Lucky", image: "/images/organizers/lucky.png" },
-    { name: "Vicky", image: "/images/organizers/vicky.png" },
-    { name: "Abhi", image: "/images/organizers/abhi.png" },
-    { name: "Vinay", image: "/images/organizers/vinay.png" },
-    { name: "Santosh", image: "/images/organizers/santosh.png" },
-    { name: "Akshay", image: "/images/organizers/akshay.png" },
-    { name: "Tillu", image: "/images/organizers/tillu.png" },
-    { name: "Nani", image: "/images/organizers/nani.png" },
-    { name: "Bablu", image: "/images/organizers/bablu.png" },
-    { name: "Tinku", image: "/images/organizers/tinku.png" },
-    { name: "Sonu", image: "/images/organizers/sonu.png" },
+    {
+      id: "lucky-draw",
+      title: "Laddu Lucky Draw",
+      date: "Festive Draw",
+      time: "Draw on Nimarjan Day",
+      description: "Participate in the auspicious Laddu Lucky Draw contest! Entry token is ₹99/- only.",
+      badge: "Token ₹99/- Only",
+      highlight: true,
+    },
+    {
+      id: "laddu-auction",
+      title: "Laddu Auction",
+      date: "23 September 2026",
+      time: "7:00 PM",
+      description: "Auspicious bidding ceremony for the sacred Maha Laddu prasadam before the immersion procession.",
+      badge: "Sacred Auction",
+      highlight: false,
+    },
+    {
+      id: "ganesh-visarjan",
+      title: "Ganesh Nimarjan",
+      date: "23 September 2026",
+      time: "7:30 PM",
+      description: "Grand Shobha Yatra and Ganesh Nimarjan procession starting from LB Nagar, Hyderabad.",
+      badge: "Grand Finale",
+      highlight: true,
+    },
   ],
   visarjanDate: "23 September 2026",
-  visarjanTime: "7:00 PM",
-  visarjanStartingLocation: "Nehru Nagar, Kachiguda",
-  visarjanLocation: "Tank Bund",
-  visarjanAddress: "Tank Bund, Hyderabad",
-  visarjanMapsUrl: "https://maps.google.com/?q=Tank+Bund+Hyderabad",
-  visarjanRoute: "",
-  contactNumbers: ["8309963802"],
-  whatsappNumber: "8309963802",
-  countdownDate: "2026-09-14T19:30:00",
+  visarjanTime: "7:30 PM",
+  visarjanStartingLocation: "LB Nagar, Hyderabad",
+  visarjanLocation: "Hyderabad",
+  visarjanAddress: "LB Nagar, Hyderabad",
+  visarjanMapsUrl: "https://maps.google.com/?q=LB+Nagar+Hyderabad",
+  visarjanRoute: "Grand Shobha Yatra starting from LB Nagar, Hyderabad",
+  contactNumbers: ["9133007992"],
+  whatsappNumber: "9133007992",
+  countdownDate: "2026-09-14T19:00:00",
   galleryImages: [
-    { id: "1", title: "Bappa Darshan", image: "/images/gallery/ganesh-1.jpg" },
-    { id: "2", title: "Bappa Darshan", image: "/images/gallery/ganesh-2.jpg" },
-    { id: "3", title: "Bappa Darshan", image: "/images/gallery/ganesh-3.jpg" },
-    { id: "4", title: "Bappa Darshan", image: "/images/gallery/ganesh-4.jpg" },
-    { id: "5", title: "Bappa Darshan", image: "/images/gallery/ganesh-5.jpg" },
-    { id: "6", title: "Bappa Darshan", image: "/images/gallery/ganesh-6.jpg" },
+    { id: "1", title: "Bappa Darshan", image: "/images/gallery/ganesh (1).jpeg" },
+    { id: "2", title: "Bappa Darshan", image: "/images/gallery/ganesh (2).jpeg" },
+    { id: "3", title: "Bappa Darshan", image: "/images/gallery/ganesh (3).jpeg" },
+    { id: "4", title: "Bappa Darshan", image: "/images/gallery/ganesh (4).jpeg" },
+    { id: "5", title: "Bappa Darshan", image: "/images/gallery/ganesh (5).jpeg" },
+    { id: "6", title: "Bappa Darshan", image: "/images/gallery/ganesh (6).jpeg" },
+    { id: "7", title: "Bappa Darshan", image: "/images/gallery/ganesh (7).jpeg" },
+    { id: "8", title: "Bappa Darshan", image: "/images/gallery/ganesh (8).jpeg" },
   ],
   audioFile: "/audio/jai-ganesha.mp3",
 };

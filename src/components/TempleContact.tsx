@@ -5,17 +5,18 @@ import { OrnateDivider, CornerFlourish } from "./TempleMotifs";
 
 export const TempleContact: React.FC = () => {
   const primaryPhone = eventConfig.contactNumbers[0] || eventConfig.whatsappNumber;
+  const displayPhone = primaryPhone.length === 10 ? `${primaryPhone.slice(0, 5)} ${primaryPhone.slice(5)}` : primaryPhone;
 
-  const politeMessage = "Hello Sri Sai Youth Association, I would like to attend the Ganesh Chaturthi celebration.";
+  const politeMessage = `Hello ${eventConfig.associationName}, I would like to attend the Ganesh Chaturthi celebration.`;
   const whatsappUrl = `https://wa.me/91${eventConfig.whatsappNumber}?text=${encodeURIComponent(
     politeMessage
   )}`;
 
   return (
-    <section className="relative w-full px-4 py-6 flex flex-col items-center text-center">
-      {/* Compact Small RSVP Section */}
-      <div className="w-full max-w-[390px] flex flex-col items-center space-y-3">
-        <span className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
+    <section className="relative w-full px-4 py-8 flex flex-col items-center text-center">
+      {/* RSVP Section */}
+      <div className="w-full max-w-md md:max-w-xl flex flex-col items-center space-y-3">
+        <span className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E7C56A] font-bold block">
           CONTACT / RSVP
         </span>
 
@@ -34,7 +35,7 @@ export const TempleContact: React.FC = () => {
               WhatsApp RSVP
             </p>
             <p className="font-cinzel text-xs font-bold text-[#E7C56A] tracking-wider">
-              +91 {primaryPhone}
+              +91 {displayPhone}
             </p>
           </div>
 

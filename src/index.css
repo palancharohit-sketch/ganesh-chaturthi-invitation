@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* Master Storyboard Color Palette */
-  --bg-darkest: #120604;
-  --bg-dark: #1A0805;
-  --bg-surface: #260B06;
-  --bg-card: #3A1008;
+  /* Premium Festive Ganesh Chaturthi Palette */
+  --bg-darkest: #100403;
+  --bg-dark: #180605;
+  --bg-surface: #240906;
+  --bg-card: #3A0F09;
 
-  --maroon-deep: #4A1009;
-  --maroon-rich: #5A170D;
+  --maroon-deep: #54110A;
+  --maroon-rich: #6D160D;
+  --red-festive: #87190F;
+
+  --saffron-warm: #E65A16;
+  --saffron-bright: #F57C28;
 
   --gold-antique: #B88632;
   --gold-medium: #C9973E;

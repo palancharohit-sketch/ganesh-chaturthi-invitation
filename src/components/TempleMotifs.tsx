@@ -235,7 +235,7 @@ export const TempleBell: React.FC<{
   height?: number | string;
   className?: string;
   delay?: number;
-}> = ({ index = 1, height = "h-24 sm:h-28", className = "", delay = 0 }) => {
+}> = ({ index = 1, height = "h-48 sm:h-64 md:h-80 lg:h-96", className = "", delay = 0 }) => {
   const bellImg = `/images/decorations/bell-${index}.png`;
 
   return (
@@ -250,7 +250,7 @@ export const TempleBell: React.FC<{
       <img
         src={bellImg}
         alt={`Temple Bell ${index}`}
-        className={`${typeof height === "string" ? height : `h-[${height}px]`} w-auto object-contain filter drop-shadow-[0_6px_14px_rgba(0,0,0,0.8)]`}
+        className={`${typeof height === "string" ? height : `h-[${height}px]`} w-auto object-contain filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.9)] drop-shadow-[0_4px_14px_rgba(231,197,106,0.45)]`}
       />
     </div>
   );
@@ -261,12 +261,16 @@ export const TempleBellRow: React.FC<{ className?: string; height?: string }> = 
   className = "",
   height,
 }) => (
-  <div className={`w-full flex justify-between items-start pointer-events-none px-2 sm:px-4 ${className}`}>
-    <TempleBell index={1} height={height || "h-32 sm:h-40"} delay={0} />
-    <TempleBell index={2} height={height ? "h-26 sm:h-32" : "h-28 sm:h-34"} delay={0.6} />
+  <div className={`w-full flex justify-between items-start pointer-events-none px-2 sm:px-4 md:px-8 ${className}`}>
+    <div className="flex items-start gap-1.5 sm:gap-3 md:gap-4">
+      <TempleBell index={1} height={height || "h-48 sm:h-64 md:h-80 lg:h-96"} delay={0} />
+      <TempleBell index={2} height={height ? "h-36 sm:h-50 md:h-64 lg:h-76" : "h-36 sm:h-50 md:h-64 lg:h-76"} delay={0.6} />
+    </div>
     <div className="flex-1" />
-    <TempleBell index={3} height={height ? "h-26 sm:h-32" : "h-28 sm:h-34"} delay={1.2} />
-    <TempleBell index={4} height={height || "h-32 sm:h-40"} delay={0.4} />
+    <div className="flex items-start gap-1.5 sm:gap-3 md:gap-4">
+      <TempleBell index={3} height={height ? "h-36 sm:h-50 md:h-64 lg:h-76" : "h-36 sm:h-50 md:h-64 lg:h-76"} delay={1.2} />
+      <TempleBell index={4} height={height || "h-48 sm:h-64 md:h-80 lg:h-96"} delay={0.4} />
+    </div>
   </div>
 );
 
