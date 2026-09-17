@@ -80,7 +80,7 @@ export const TempleHero: React.FC = () => {
           <div className="relative w-full flex items-center justify-center px-2 sm:px-4">
             <img
               src={ganeshaSrc}
-              alt="Lord Ganesha - Nava Yuva Sena"
+              alt={`Lord Ganesha - ${eventConfig.associationName}`}
               onError={() => setImgError(true)}
               className="w-[94vw] max-w-[680px] md:w-[min(90vw,950px)] md:max-w-[950px] lg:w-[min(90vw,1050px)] lg:max-w-[1050px] h-auto object-contain filter drop-shadow-[0_24px_55px_rgba(231,197,106,0.75)] select-none transition-transform duration-700 hover:scale-[1.02]"
             />

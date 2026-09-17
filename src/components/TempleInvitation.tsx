@@ -1,4 +1,5 @@
 import React from "react";
+import { eventConfig } from "../config/event";
 import { CornerFlourish, DiyaFlame, LotusMotif } from "./TempleMotifs";
 
 export const TempleInvitation: React.FC = () => {
@@ -24,7 +25,7 @@ export const TempleInvitation: React.FC = () => {
 
         {/* Header */}
         <h3 className="font-yatra text-base sm:text-lg uppercase tracking-wider text-[#8D5A18] font-bold block mb-1">
-          NAVA YUVA SENA
+          {eventConfig.associationName}
         </h3>
         <p className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#B88632] mb-4">
           GANESH CHATURTHI CELEBRATION
