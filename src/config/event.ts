@@ -51,7 +51,7 @@ export interface EventConfig {
 }
 
 export const eventConfig: EventConfig = {
-  associationName: "SRI SAI YOUTH ASSOCIATION",
+  associationName: "NAVA YUVA SENA",
   subTitle: "GANESH CHATURTHI CELEBRATION",
   mantra: "GANPATI BAPPA MORYA",
   year: 2026,

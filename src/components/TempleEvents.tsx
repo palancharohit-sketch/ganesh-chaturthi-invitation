@@ -20,7 +20,7 @@ export const TempleEvents: React.FC = () => {
   const luckyDrawPhone = "9133007992";
   const luckyDrawPhoneDisplay = "91330 07992";
   const luckyDrawWhatsappUrl = `https://wa.me/91${luckyDrawPhone}?text=${encodeURIComponent(
-    "Hello, I would like to participate in the SRI SAI YOUTH ASSOCIATION Laddu Lucky Draw. Please share the payment details."
+    "Hello, I would like to participate in the NAVA YUVA SENA Laddu Lucky Draw. Please share the payment details."
   )}`;
 
   const getEventIcon = (id: string) => {
@@ -56,7 +56,7 @@ export const TempleEvents: React.FC = () => {
           </h2>
 
           <p className="font-cinzel text-xs sm:text-sm font-bold tracking-wider text-[#E65A16] uppercase">
-            SRI SAI YOUTH ASSOCIATION • LB NAGAR
+            NAVA YUVA SENA • LB NAGAR
           </p>
 
           <p className="font-asar text-xs sm:text-sm text-[#F4E5C3]/90 italic max-w-md px-2 pt-0.5">

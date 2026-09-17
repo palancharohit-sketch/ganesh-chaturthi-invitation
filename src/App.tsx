@@ -66,7 +66,7 @@ export const App: React.FC = () => {
         <div className="hidden xl:block absolute inset-y-0 left-6 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/30 to-transparent pointer-events-none" />
         <div className="hidden xl:block absolute inset-y-0 right-6 w-px bg-gradient-to-b from-transparent via-[#D4AF5A]/30 to-transparent pointer-events-none" />
 
-        {/* 2. BAPPA HERO (Sri Sai Youth Association, Large Ganesha Idol, Devotional Ambience) */}
+        {/* 2. BAPPA HERO (Nava Yuva Sena, Large Ganesha Idol, Devotional Ambience) */}
         <TempleHero />
 
         {/* 3. INVITATION MESSAGE (Parchment Card with Devotional Welcome & Bappa Blessing) */}
